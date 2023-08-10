@@ -17,14 +17,13 @@ regBtn.addEventListener('click', function () {
     var contrasena = document.getElementById('password1').value;
     var email = document.getElementById('email').value;
     var repetirContra = document.getElementById('password2').value;
-    console.log(contrasena);
-      
-if (nombre.length  > 0 && apellido.length  > 0 && contrasena.length   > 0 && email.length   > 0 && repetirContra.length   > 0 && contrasena.length > 5 && contrasena === repetirContra && document.getElementById('terminos').checked)  {
-    
+
+    if (nombre.length > 0 && apellido.length > 0 && contrasena.length > 0 && email.length > 0 && repetirContra.length > 0 && contrasena.length > 5 && contrasena === repetirContra && document.getElementById('terminos').checked) {
+
         showAlertSuccess();
     }
-    else { 
-        
+    else {
+
         showAlertError();
     }
 });
