@@ -11,7 +11,7 @@ function showAlertError() {
 
 
 
-regBtn.addEventListener('click', function () {
+regBtn.addEventListener('click', function (event) {
     var nombre = document.getElementById('nombre').value;
     var apellido = document.getElementById('apellido').value;
     var contrasena = document.getElementById('password1').value;
@@ -21,10 +21,12 @@ regBtn.addEventListener('click', function () {
     if (nombre.length > 0 && apellido.length > 0 && contrasena.length > 0 && email.length > 0 && repetirContra.length > 0 && contrasena.length > 5 && contrasena === repetirContra && document.getElementById('terminos').checked) {
 
         showAlertSuccess();
+        event.preventDefault()
     }
     else {
 
         showAlertError();
+        event.preventDefault()
     }
 });
 
